@@ -1,0 +1,20 @@
+{
+  "name": "atomic-zoomer",
+  "description": "",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://wax.atomichub.io/*"
+      ],
+      "js": [ "inject.js" ]
+    }
+  ],
+  "web_accessible_resources": [
+    "content.js",
+    "images/*",
+    "fonts/*"
+  ]
+}
